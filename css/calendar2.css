@@ -1,0 +1,64 @@
+@font-face {
+	font-family: 'RobotoRegular';
+	src: url('../fonts/roboto/Roboto-Regular.ttf') format('truetype');
+}
+
+:root{
+    --fondo_body: #ff6266;
+    --blanco: #fff;
+    --negro: #000;
+    --gris: #404040;
+    --color_numeros_dias: #7b7f85;
+    --dia_actual: #ff7750;
+    --roboto_regular: "RobotoRegular";
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html
+{
+    font-family: var(--roboto_regular);
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    font-size: 12px;
+}
+
+.calendario2 .cuerpo{
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.calendario2 .cuerpo div:first-child{
+    background-color: var(--gris);
+    color: var(--blanco);
+}
+
+.calendario2 table{
+    width: 100%;
+    border-collapse: collapse;
+    
+}
+
+.calendario2 table td{
+    width: 76px;
+    height: 60px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-size: 2rem;    
+}
+
+.calendario2 table td:hover{
+    background-color: rgb(255, 119, 80, 0.5);
+    color: var(--blanco);
+    border-radius: 1em;
+}
+
+.calendario2 table td.dia_actual{
+    background-color: var(--dia_actual);
+    color: var(--blanco);
+    border-radius: 1em;
+}
