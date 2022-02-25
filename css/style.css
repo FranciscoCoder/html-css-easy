@@ -1,7 +1,137 @@
-body
+@font-face {
+	font-family: 'RobotoRegular';
+	src: url('../fonts/roboto/Roboto-Regular.ttf') format('truetype');
+}
+
+:root{
+    --blanco: #FFF;
+    --negro: #000;
+    --gris: #EAEDF2;
+    --gris_degradado: #F5F6F8;
+    --color_fuera_mes: #C5C8CA;
+    --fondo_campo: #F3F4F6;
+    --rosa: #ff374b;
+    --rosa_claro: #ffeaec;
+    --boton_apply: #1752ff;
+    --roboto_regular: "RobotoRegular";
+}
+
+* {
+box-sizing: border-box;
+}
+
+html
 {
+    font-family: var(--roboto_regular);
     padding: 0px;
     margin: 0px;
     width: 100%;
+    font-size: 12px;
 }
 
+.calendario1{
+    background-color: var(--gris);
+}
+
+.fondo_blanco{ 
+    padding: 15px 5% 0px; 
+    background-color: var(--blanco); 
+    border-radius: 3em 3em 0 0;
+}
+
+.fondo_degradado{
+    padding: 10px 5% 15px;
+    background: linear-gradient(to bottom, var(--gris_degradado), var(--blanco)); 
+    border-radius: 0 0 3em 3em;
+}
+
+.calendario1 table{
+    width: 100%;
+    border-collapse: collapse;
+    
+}
+
+.calendario1 table td{
+    width: 76px;
+    height: 60px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-size: 2rem;    
+}
+
+.calendario1 table td:hover{
+    background-color: var(--rosa_claro);
+    color: var(--rosa);
+    border-radius: 1em;
+}
+
+.calendario1 table .nombre_dias td{
+    color: var(--color_fuera_mes);
+    background-color: var(--blanco);
+}
+
+.calendario1 table td.dia_actual{
+    background-color: var(--rosa);
+    color: var(--blanco);
+    border-radius: 1em;
+}
+
+.calendario1 table td.fuera_del_mes{
+    background-color: transparent;
+    color: var(--color_fuera_mes);
+}
+
+.calendario1 .cuerpo_calendario{
+    max-width: 600px;
+    margin: 50px auto;
+}
+
+.calendario1 .cuerpo_calendario .campo_fecha{
+    position: relative;
+    display: inline-block;
+    width: 44%;
+    margin: 10px 3%;
+    padding: 7px 2%;
+    background-color: var(--fondo_campo);
+    border-radius: 24px;
+}
+.calendario1 .cuerpo_calendario .campo_fecha select{
+    width: 100%;
+    cursor: pointer;
+    padding: 15px 0px;
+    outline: 0;
+    border: 0;
+    background: transparent;
+    color: var(--negro);
+    font-size: 1.5rem;
+}
+
+.calendario1 .botones{
+    text-align: center;
+    margin: 20px 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.calendario1 .botones a{
+    padding: 16px;
+    border-radius: 1em;
+    text-decoration: none;
+    font-size: 1.7rem;
+    width: 40%;
+    margin: 0px 5%;
+}
+
+.calendario1 .botones a:first-child{
+    background-color: var(--fondo_campo);
+    color: var(--negro);
+}
+.calendario1 .botones a:last-child{
+    background-color: var(--boton_apply);
+    color: var(--blanco);
+}
+
+.calendario1 .botones a:hover{
+    font-weight: bold;
+}
