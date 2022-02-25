@@ -24,22 +24,25 @@ html
     margin: 0px;
     width: 100%;
     font-size: 12px;
+    background-color: #ff6266;
 }
 
 .calendario2 .cuerpo{
     max-width: 450px;
     margin: 20px auto;
-}
-
-.calendario2 .cuerpo div:first-child{
-    background-color: var(--gris);
-    color: var(--blanco);
+    background-color: #fff;
+    box-shadow: 0px 4px 28px black;
 }
 
 .calendario2 table{
     width: 100%;
     border-collapse: collapse;
     
+}
+
+.calendario2 table tr:first-child td{
+    background-color: var(--gris);
+    color: var(--blanco);
 }
 
 .calendario2 table td{

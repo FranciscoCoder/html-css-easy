@@ -1,35 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calendar 2</title>
-  <link rel="stylesheet" href="css/calendar2.css">
+  <link rel="stylesheet" href="css/calendar3.css">
 </head>
 
-<body class="calendario2">
+<body class="calendario3">
+  <div class="fondo_calendario"></div>
   <div class="cuerpo">
-    <div>
+    <div class="info_calendario">
+      <div class="cuerpo_info_calendario">
+        <div>28, Tuesday</div>
+        <div>June</div>
+      </div>
+    </div>
+    <div class="seccion_dias">
       <table>
         <tr>
-          <td>MON</td>
-          <td>TUE</td>
-          <td>WED</td>
-          <td>THU</td>
-          <td>FRI</td>
-          <td>SAT</td>
-          <td>SUN</td>
+          <td class="nombre_dias">M</td>
+          <td class="nombre_dias">T</td>
+          <td class="nombre_dias">W</td>
+          <td class="nombre_dias">T</td>
+          <td class="nombre_dias">F</td>
+          <td class="nombre_dias">S</td>
+          <td class="festivo">S</td>
         </tr>
         <tr>
-          <td class="fuera_del_mes"></td>
-          <td class="fuera_del_mes"></td>
+          <td></td>
+          <td></td>
           <td>1</td>
           <td>2</td>
           <td>3</td>
           <td>4</td>
-          <td>5</td>
+          <td class="festivo">5</td>
         </tr>
         <tr>
           <td>6</td>
@@ -38,7 +45,7 @@
           <td>9</td>
           <td>10</td>
           <td>11</td>
-          <td>12</td>
+          <td class="festivo">12</td>
         </tr>
         <tr>
           <td>13</td>
@@ -47,7 +54,7 @@
           <td>16</td>
           <td>17</td>
           <td>18</td>
-          <td>19</td>
+          <td class="festivo">19</td>
         </tr>
         <tr>
           <td>20</td>
@@ -56,16 +63,16 @@
           <td>23</td>
           <td>24</td>
           <td>25</td>
-          <td>26</td>
+          <td class="festivo">26</td>
         </tr>
         <tr>
           <td>27</td>
           <td class="dia_actual">28</td>
           <td>29</td>
           <td>30</td>
-          <td class="fuera_del_mes"></td>
-          <td class="fuera_del_mes"></td>
-          <td class="fuera_del_mes"></td>
+          <td></td>
+          <td></td>
+          <td></td>
         </tr>
       </table>
     </div>

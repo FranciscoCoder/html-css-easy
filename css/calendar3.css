@@ -1,0 +1,98 @@
+@font-face {
+	font-family: 'RobotoRegular';
+	src: url('../fonts/roboto/Roboto-Regular.ttf') format('truetype');
+}
+
+:root{
+    --fondo_body: #ff6266;
+    --blanco: #fff;
+    --negro: #000;
+    --gris: #404040;
+    --color_numeros_dias: #7b7f85;
+    --dia_actual: #ff7750;
+    --roboto_regular: "RobotoRegular";
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html
+{
+    font-family: var(--roboto_regular);
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    font-size: 12px;
+}
+
+html, body{
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding: 0px;
+    margin: 0px;
+}
+
+.fondo_calendario{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-image: url('../images/bg_calendar.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    filter: blur(5px);
+}
+
+.cuerpo{
+    position: relative; z-index: 2;
+    max-width: 360px;
+    margin: 50px auto;
+}
+.info_calendario{
+    background-image: url('../images/bg_calendar.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    overflow: hidden;
+}
+
+.cuerpo_info_calendario {
+    background-color: rgba(0,0,0 ,0.3);
+    color: #fff;
+    border-radius: 15px 15px 0px 0px;
+    padding: 50px 10% 100px;
+    font-size: 3em;
+    text-shadow: 0px 1px black;
+}
+
+.seccion_dias{
+    padding: 20px 0px;
+    background-color: var(--blanco);
+    border-radius: 0px 0px 15px 10px;
+}
+
+table{
+    width: 90%;
+    margin:0px auto;
+    border-collapse: collapse;
+}
+
+td{
+    width: 76px;
+    height: 50px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-size: 15px;   
+    color: #7b7f85;
+}
+
+td.festivo{color: #ff6266;}
+
+td.dia_actual{color: var(--blanco); background-color: green;}
+
+.nombre_dias{color: var(--negro);}
