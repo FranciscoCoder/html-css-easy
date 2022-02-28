@@ -3,13 +3,16 @@
 	src: url('../fonts/roboto/Roboto-Regular.ttf') format('truetype');
 }
 
+:root{
+    font-size: 16px;
+}
 
 * {
     box-sizing: border-box;
 }
 
 *::placeholder{
-    color:#fff;
+    color:#535c70;
     opacity: 0.6;
 }
 html{
@@ -21,38 +24,79 @@ html, body{
     margin: 0px;
     width: 100%;
     overflow-x: hidden;
+    height: 100%;
 }
 body{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.col_login{
-    width: 40%;
-    padding: 50px 5%;
-}
-
-.col_login:first-child{
     background-color: skyblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-
-.col_login:first-child .cuerpo_login{
+.cuerpo_login{
+    max-width: 350px;
     width: 90%;
     margin: 0px auto;
-    padding: 10px 5%;
-    border-radius: 10px;
+    padding: 20px 2%;
+    border-radius: 15px;
     background-color: white;
 }
 
-.col_login:last-child{
-    background-color: white;
+h1, h2{
+    margin: 0px;
+    color: #535c70;
 }
 
-.col_login:last-child .cuerpo_login{
-    box-shadow: 0px 0px 10px 1px #000;
-    width: 90%;
-    margin: 0px auto;
-    padding: 10px 5%;
+.encabezado h1{font-size: 1.5rem;}
+.encabezado h2{
+    font-size: 1rem;
+    padding: 5px 0px;
+}
+
+input{
+    outline:none;
+    width: 100%;
+    margin: 10px 0px;
+}
+
+input[type=text], input[type=password], input[type=email]{
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 1px solid #eeeeee;
+    padding: 5px 0px;
+    font-size: 1.1rem;
+}
+
+input[type=submit]{
+    border: 0;
+    padding: 10px;
+    color: #fff;
+    background: linear-gradient(to bottom, #ff6e1f, #ff625d);
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.enlace_registro{
+    font-size: 1rem;
+    color: #777e8f;
+    padding: 10px 0px;
+}
+
+.enlace_registro a{
+    text-decoration: none;
+    color: #000;
+    transition: all 0.3s linear;
+}
+
+.enlace_registro a:hover{
+    color: #ff6e1f;
+}
+
+@media (max-width: 350px) {
+    .cuerpo_login{
+        padding: 20px 5%;
+    }
 }
