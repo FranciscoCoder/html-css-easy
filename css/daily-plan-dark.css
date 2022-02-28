@@ -1,0 +1,142 @@
+@font-face {
+	font-family: 'RobotoRegular';
+	src: url('../fonts/roboto/Roboto-Regular.ttf') format('truetype');
+}
+
+:root{
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'RobotoRegular';
+}
+html, body{
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.cuerpo_daily{
+    max-width: 380px;
+    width: 90%;
+    margin: 100px auto;
+    padding: 20px 2%;
+    border-radius: 0px;
+    background-color: #5a5a5a;
+    box-shadow: 0px 0px 15px 0px rgb(0 0 0 / 16%);
+}
+.encabezado{
+    border-bottom: 2px solid #fff;
+}
+
+.encabezado h1{
+    color: #fff;
+}
+
+.encabezado h2{
+    color: #fff;
+}
+
+.hoy{
+    background-color: #ff99a8;
+    color: #fff;
+    padding: 30px 25px;
+    margin: 20px 0px;
+    box-shadow: 0px 0px 15px 0px rgb(0 0 0 / 16%);
+}
+
+.titulo_hoy{
+    font-size: 1rem;
+    padding: 0px 0px 10px;
+}
+
+.fila_aniadir{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.fecha_hoy{
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0px 10px 0px 0px;
+    width: 90%;
+}
+
+.icono_aniadir{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.aniadir{
+    background-color: #fff;
+    transform: rotate(0deg);
+    transition: all 0.5s ease-in-out;
+    color: grey;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.aniadir:hover{
+    transform: rotate(45deg);
+}
+
+.registros{
+    margin: 50px 0px 20px;
+}
+
+.titulo_registros{
+    color: #fff;
+    font-size: 1rem;
+}
+
+ul {
+    list-style: none; 
+    padding: 0px 0px 0px 20px;
+}
+ul li{
+    position: relative;
+    margin: 30px 0px;
+}
+ul li:before{
+    content:"•";
+    font-size:3rem;
+    position: absolute;
+    left: -24px;
+    top: -15px;
+    color: #d3d3d3;
+}
+ul li.rosa:before{
+    color:#ff99a8;
+}
+
+ul li div:first-child{
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+ul li div:last-child{
+    color: #ff99a8;
+    font-size: 1rem;
+}
+
+@media (max-width:500px) {
+    .cuerpo_daily{
+        padding: 20px 5%;
+    }
+}
