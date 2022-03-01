@@ -3,6 +3,13 @@
 	src: url('../fonts/roboto/Roboto-Regular.ttf') format('truetype');
 }
 
+* {
+    box-sizing: border-box;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
 :root{
     --blanco: #FFF;
     --negro: #000;
@@ -14,10 +21,6 @@
     --rosa_claro: #ffeaec;
     --boton_apply: #1752ff;
     --roboto_regular: "RobotoRegular";
-}
-
-* {
-box-sizing: border-box;
 }
 
 html
@@ -114,20 +117,22 @@ html
     flex-direction: row;
     flex-wrap: wrap;
 }
-.calendario1 .botones a{
+.calendario1 .botones button{
     padding: 16px;
     border-radius: 1em;
     text-decoration: none;
     font-size: 1.7rem;
     width: 40%;
     margin: 0px 5%;
+    border: 0;
+    cursor: pointer;
 }
 
-.calendario1 .botones a:first-child{
+.calendario1 .botones button:first-child{
     background-color: var(--fondo_campo);
     color: var(--negro);
 }
-.calendario1 .botones a:last-child{
+.calendario1 .botones button:last-child{
     background-color: var(--boton_apply);
     color: var(--blanco);
 }

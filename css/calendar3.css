@@ -3,6 +3,10 @@
 	src: url('../fonts/roboto/Roboto-Regular.ttf') format('truetype');
 }
 
+* {
+    box-sizing: border-box;
+}
+
 :root{
     --fondo_body: #ff6266;
     --blanco: #fff;
@@ -12,10 +16,6 @@
     --dia_actual: #ff7750;
     --roboto_regular: "RobotoRegular";
     font-size: 15px;
-}
-
-* {
-    box-sizing: border-box;
 }
 
 html

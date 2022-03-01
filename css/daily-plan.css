@@ -9,6 +9,7 @@
 
 * {
     box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
 }
 
 html{
@@ -21,25 +22,49 @@ html, body{
     overflow-x: hidden;
 }
 
+body{
+    --blanco: #fff;
+    --gris_encabezado: #d3d3d3;
+    --encabezado1:#363b41; 
+    --encabezado2:#d3d3d3; 
+    --titulo_registros:grey;
+    --color_hora:#000;
+    --color_asunto:grey;
+}
+
+.dark{
+    --blanco: #5a5a5a;
+    --gris_encabezado: #fff;
+    --encabezado1:#fff; 
+    --encabezado2:#fff;
+    --titulo_registros:#fff;
+    --color_hora:#fff;
+    --color_asunto:#ff99a8;
+}
+
+body{
+    background-color: var(--blanco);
+}
+
 .cuerpo_daily{
     max-width: 380px;
     width: 90%;
     margin: 100px auto;
     padding: 20px 2%;
     border-radius: 0px;
-    background-color: white;
+    background-color:var(--blanco);
     box-shadow: 0px 0px 15px 0px rgb(0 0 0 / 16%);
 }
 .encabezado{
-    border-bottom: 2px solid #d3d3d3;
+    border-bottom: 2px solid var(--gris_encabezado);
 }
 
 .encabezado h1{
-    color: #363b41;
+    color: var(--encabezado1);
 }
 
 .encabezado h2{
-    color: #d3d3d3;
+    color: var(--encabezado2);
 }
 
 .hoy{
@@ -101,7 +126,7 @@ html, body{
 }
 
 .titulo_registros{
-    color: grey;
+    color: var(--titulo_registros);
     font-size: 1rem;
 }
 
@@ -126,12 +151,12 @@ ul li.rosa:before{
 }
 
 ul li div:first-child{
-    color: #000;
+    color: var(--color_hora);
     font-size: 1.2rem;
 }
 
 ul li div:last-child{
-    color: grey;
+    color: var(--color_asunto);
     font-size: 1rem;
 }
 
