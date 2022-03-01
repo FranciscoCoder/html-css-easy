@@ -101,11 +101,11 @@ td{
     color: #7b7f85;
 }
 
+.nombre_dias td{color: var(--negro);}
+
 td.festivo{color: #ff6266;}
 
 td.dia_actual{color: var(--blanco); background-color: green;}
-
-.nombre_dias{color: var(--negro);}
 
 @media (max-width:500px) {
     h1{
