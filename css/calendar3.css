@@ -1,120 +1,126 @@
 @font-face {
-	font-family: 'RobotoRegular';
-	src: url('../fonts/roboto/Roboto-Regular.ttf') format('truetype');
+  font-family: "RobotoRegular";
+  src: url("../fonts/roboto/Roboto-Regular.ttf") format("truetype");
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-:root{
-    --fondo_body: #ff6266;
-    --blanco: #fff;
-    --negro: #000;
-    --gris: #404040;
-    --color_numeros_dias: #7b7f85;
-    --dia_actual: #ff7750;
-    --roboto_regular: "RobotoRegular";
-    font-size: 15px;
+:root {
+  --fondo_body: #ff6266;
+  --blanco: #fff;
+  --negro: #000;
+  --gris: #404040;
+  --color_numeros_dias: #7b7f85;
+  --dia_actual: #ff7750;
+  --roboto_regular: "RobotoRegular";
+  font-size: 15px;
+  font-family: var(--roboto_regular);
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
 }
 
-html
-{
-    font-family: var(--roboto_regular);
-    padding: 0px;
-    margin: 0px;
-    width: 100%;
+html,
+body {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 0px;
+  margin: 0px;
 }
 
-html, body{
-    display: block;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    padding: 0px;
-    margin: 0px;
+h1 {
+  font-size: 3rem;
+  line-height: 2rem;
 }
 
-h1{
-    font-size: 3rem;
-    line-height: 2rem;
+h2 {
+  font-size: 2rem;
+  line-height: 1rem;
 }
 
-h2{
-    font-size: 2rem;
-    line-height: 1rem;
+.fondo_calendario {
+  position: fixed;
+  width: 105%;
+  height: 105%;
+  z-index: 1;
+  background-image: url("../images/bg_calendar.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(5px);
+  margin:-1% -2%
 }
 
-.fondo_calendario{
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    background-image: url('../images/bg_calendar.jpg');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size:cover;
-    filter: blur(5px);
+.cuerpo {
+  position: relative;
+  z-index: 2;
+  max-width: 360px;
+  width: 90%;
+  margin: 50px auto;
 }
-
-.cuerpo{
-    position: relative; z-index: 2;
-    max-width: 360px;
-    width: 90%;
-    margin: 50px auto;
-}
-.info_calendario{
-    background-image: url('../images/bg_calendar.jpg');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size:cover;
-    overflow: hidden;
-    border-radius: 15px 15px 0px 0px;
+.info_calendario {
+  background-image: url("../images/bg_calendar.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  border-radius: 15px 15px 0px 0px;
 }
 
 .cuerpo_info_calendario {
-    background-color: rgba(0,0,0 ,0.3);
-    color: #fff;
-    padding: 50px 10% 100px;
-    text-shadow: 0px 1px black;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  padding: 50px 10% 100px;
+  text-shadow: 0px 1px black;
 }
 
-.seccion_dias{
-    padding: 20px 0px;
-    background-color: var(--blanco);
-    border-radius: 0px 0px 15px 10px;
+.seccion_dias {
+  padding: 20px 0px;
+  background-color: var(--blanco);
+  border-radius: 0px 0px 15px 10px;
 }
 
-table{
-    width: 90%;
-    margin:0px auto;
-    border-collapse: collapse;
+table {
+  width: 90%;
+  margin: 0px auto;
+  border-collapse: collapse;
 }
 
-td{
-    width: 76px;
-    height: 50px;
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    font-size: 15px;   
-    color: #7b7f85;
+td {
+  width: 76px;
+  height: 50px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-size: 15px;
+  color: #7b7f85;
 }
 
-.nombre_dias td{color: var(--negro);}
+.nombre_dias td {
+  color: var(--negro);
+}
 
-td.festivo{color: #ff6266;}
+td.festivo {
+  color: #ff6266;
+}
 
-td.dia_actual{color: var(--blanco); background-color: green;}
+td.dia_actual {
+  color: var(--blanco);
+  background-color: green;
+}
 
-@media (max-width:500px) {
-    h1{
-        font-size: 2rem;
-        line-height: 1rem;
-    }
-    
-    h2{
-        font-size: 1.5rem;
-        line-height: 1.5rem;
-    }
+@media (max-width: 500px) {
+  h1 {
+    font-size: 2rem;
+    line-height: 1rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
 }
